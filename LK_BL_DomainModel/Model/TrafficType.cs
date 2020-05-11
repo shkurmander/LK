@@ -1,6 +1,6 @@
 ﻿namespace LK.BL.Model.DomainModel
 {
-    class TrafficType
+    public class TrafficType
     {
         public int id { get; set; }
 

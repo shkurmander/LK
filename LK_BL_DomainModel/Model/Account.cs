@@ -3,7 +3,7 @@ using LK.BL.DAInterface;
 
 namespace LK.BL.Model.DomainModel
 {
-    class Account : IAccount
+    public class Account : IAccount
     {
         public int id { get; set; }
 
@@ -11,6 +11,7 @@ namespace LK.BL.Model.DomainModel
         public string Pass { get; set; }
         public int Number { get; set; }
         public int MyProperty { get; set; }
+        public IAbonent Abonent { get; set; }
 
     }
 }

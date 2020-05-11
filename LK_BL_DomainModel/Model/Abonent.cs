@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace LK.BL.Model.DomainModel
 {
-    class Abonent : IAbonent
+    public class Abonent : IAbonent
     {
         public int id { get; set; }
         public string FirstName { get; set; }
