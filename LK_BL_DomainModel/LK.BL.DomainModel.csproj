@@ -51,6 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202005111634169_InitialCreate.cs" />
+    <Compile Include="Migrations\202005111634169_InitialCreate.designer.cs">
+      <DependentUpon>202005111634169_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005111827598_v1.1.cs" />
+    <Compile Include="Migrations\202005111827598_v1.1.designer.cs">
+      <DependentUpon>202005111827598_v1.1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Abonent.cs" />
     <Compile Include="Model\AbonentTraffic.cs" />
     <Compile Include="Model\Account.cs" />
@@ -65,7 +74,14 @@
       <Name>LK.BL.DAInterface</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005111634169_InitialCreate.resx">
+      <DependentUpon>202005111634169_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005111827598_v1.1.resx">
+      <DependentUpon>202005111827598_v1.1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
