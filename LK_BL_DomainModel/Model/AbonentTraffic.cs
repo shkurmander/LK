@@ -2,7 +2,7 @@
 
 namespace LK.BL.Model.DomainModel
 {
-    public class AbonentTraffic : ITraffic
+    public class AbonentTraffic 
     {
         public int id { get; set; }
         public TrafficType Type { get; set; }

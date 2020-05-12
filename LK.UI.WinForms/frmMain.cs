@@ -13,9 +13,9 @@ using LK.BL.DomainModel.Controller;
 
 namespace LK.UI.WinForms
 {
-    public partial class Main : Form
+    public partial class frmMain : Form
     {
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
         }

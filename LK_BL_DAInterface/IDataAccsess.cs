@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LK.BL.DAInterface
+{
+    public interface IDataAccsess
+    {
+        void AddAccount();
+        void AddAbonent();
+        void AddTariff();
+        void AddTrafficType();
+        void EditAccount();
+        void EditAbonent();
+        void EditTariff();
+        void EditTrafficType();
+
+    }
+}
