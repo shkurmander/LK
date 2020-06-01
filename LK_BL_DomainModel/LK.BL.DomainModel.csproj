@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDataAccsess.cs" />
     <Compile Include="Migrations\202005111634169_InitialCreate.cs" />
     <Compile Include="Migrations\202005111634169_InitialCreate.designer.cs">
       <DependentUpon>202005111634169_InitialCreate.cs</DependentUpon>
@@ -84,12 +85,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\Tariff.cs" />
     <Compile Include="Model\TrafficType.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LK_BL_DAInterface\LK.BL.DAInterface.csproj">
-      <Project>{d3200825-571a-43e2-9fe2-9bda513b301c}</Project>
-      <Name>LK.BL.DAInterface</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202005111634169_InitialCreate.resx">

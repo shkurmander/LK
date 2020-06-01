@@ -1,22 +1,18 @@
-﻿using LK.BL.DomainModel;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LK.BL.Model.DomainModel;
 
-namespace LK.BL.DAImpl
+namespace LK.BL.BusinessService
 {
-    public class DataAccsess : IDataAccsess
+    public class BusinessServiceImpl : IBusinessService
     {
         public void AddAbonent()
         {
-            /*Abonent abon = new Abonent
-            {
-                FirstName = name,
-                Patronimyc = patron
-
-            };*/
+            throw new NotImplementedException();
         }
 
         public void AddAccount()
@@ -29,7 +25,7 @@ namespace LK.BL.DAImpl
             throw new NotImplementedException();
         }
 
-        public void AddTrafficType()
+        public void AddTrafficType(TrafficType trType)
         {
             throw new NotImplementedException();
         }
@@ -54,7 +50,22 @@ namespace LK.BL.DAImpl
             throw new NotImplementedException();
         }
 
-        public T GetData<T>() where T : class
+        public void ViewAccount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ViewAddAbonent()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ViewAddTariff()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ViewAddTrafficType()
         {
             throw new NotImplementedException();
         }

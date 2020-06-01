@@ -60,5 +60,23 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LK.BL.BusinessService.Interface\LK.BL.BusinessService.Interface.csproj">
+      <Project>{e1eef6d6-f56b-40b7-a3de-48844f1d33ac}</Project>
+      <Name>LK.BL.BusinessService.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LK.BL.BusinessService\LK.BL.BusinessService.csproj">
+      <Project>{f2f0fd6a-3bbb-460f-b5e6-5537fed41817}</Project>
+      <Name>LK.BL.BusinessService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LK.BL.DAImpl\LK.BL.DAImpl.csproj">
+      <Project>{77b89d29-ef63-48e1-8f20-37393cf75115}</Project>
+      <Name>LK.BL.DAImpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LK_BL_DomainModel\LK.BL.DomainModel.csproj">
+      <Project>{b9fda844-405d-47f5-98b0-6ecbf281a206}</Project>
+      <Name>LK.BL.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

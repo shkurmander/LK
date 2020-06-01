@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LK.BL.DAInterface
+namespace LK.BL
 {
     public interface IDataAccsess
     {

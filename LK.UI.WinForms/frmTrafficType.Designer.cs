@@ -32,15 +32,16 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txbName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txbId
             // 
             this.txbId.Location = new System.Drawing.Point(148, 39);
             this.txbId.Name = "txbId";
+            this.txbId.ReadOnly = true;
             this.txbId.Size = new System.Drawing.Size(197, 20);
             this.txbId.TabIndex = 68;
             // 
@@ -71,13 +72,6 @@
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // txbName
-            // 
-            this.txbName.Location = new System.Drawing.Point(148, 93);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(197, 20);
-            this.txbName.TabIndex = 63;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -99,16 +93,28 @@
             this.label1.TabIndex = 60;
             this.label1.Text = "ID";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Входящий",
+            "Исходящий"});
+            this.comboBox1.Location = new System.Drawing.Point(148, 95);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(197, 21);
+            this.comboBox1.TabIndex = 69;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            // 
             // frmTrafficType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 262);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txbId);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txbName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Name = "frmTrafficType";
@@ -123,8 +129,8 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
