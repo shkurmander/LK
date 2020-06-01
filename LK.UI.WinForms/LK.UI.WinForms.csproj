@@ -36,9 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=5.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.5.2.0\lib\net461\Autofac.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -140,9 +137,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LK_BL_DomainModel\LK.BL.DomainModel.csproj">
-      <Project>{b9fda844-405d-47f5-98b0-6ecbf281a206}</Project>
-      <Name>LK.BL.DomainModel</Name>
+    <ProjectReference Include="..\LK.BL.BusinessService.Interface\LK.BL.BusinessService.Interface.csproj">
+      <Project>{e1eef6d6-f56b-40b7-a3de-48844f1d33ac}</Project>
+      <Name>LK.BL.BusinessService.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LK.Config\LK.Config.csproj">
+      <Project>{2d468617-e38d-458b-b732-e9f9abb58838}</Project>
+      <Name>LK.Config</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

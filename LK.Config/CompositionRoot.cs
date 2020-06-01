@@ -14,15 +14,17 @@ namespace LK.Config
 {
     public class CompositionRoot
     {
-       /* public BusinessService root { get; private set; }
+        public IBusinessService root { get; private set; }
         public void BuildApplication()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<SQLDAController>().As<SQLDAController>();
-          
+           
+            builder.RegisterType<BusinessServiceImpl>().As<IBusinessService>();
+            builder.RegisterType<DataAccsess>().As<IDataAccsess>();
+
 
             var container = builder.Build();
             root = container.Resolve<IBusinessService>();
-        }*/
+        }
     }
 }
