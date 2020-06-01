@@ -1,11 +1,11 @@
 ﻿
 
-using LK.BL.DAInterface;
+
 using System;
 using System.Collections.Generic;
 
 
-namespace LK.BL.Model.DomainModel
+namespace LK.BL.DomainModel
 {
     public class Abonent 
     {

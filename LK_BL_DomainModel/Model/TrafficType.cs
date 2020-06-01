@@ -1,4 +1,4 @@
-﻿namespace LK.BL.Model.DomainModel
+﻿namespace LK.BL.DomainModel
 {
     public class TrafficType
     {

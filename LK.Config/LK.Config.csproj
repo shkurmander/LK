@@ -69,9 +69,9 @@
       <Project>{f2f0fd6a-3bbb-460f-b5e6-5537fed41817}</Project>
       <Name>LK.BL.BusinessService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LK.BL.DAImpl\LK.BL.DAImpl.csproj">
-      <Project>{77b89d29-ef63-48e1-8f20-37393cf75115}</Project>
-      <Name>LK.BL.DAImpl</Name>
+    <ProjectReference Include="..\LK.BL.DataAccsess\LK.BL.DataAccsess.csproj">
+      <Project>{615c5b2d-d11f-463a-b022-11b4285838f0}</Project>
+      <Name>LK.BL.DataAccsess</Name>
     </ProjectReference>
     <ProjectReference Include="..\LK_BL_DomainModel\LK.BL.DomainModel.csproj">
       <Project>{b9fda844-405d-47f5-98b0-6ecbf281a206}</Project>

@@ -1,6 +1,6 @@
-﻿using LK.BL.DAInterface;
+﻿
 
-namespace LK.BL.Model.DomainModel
+namespace LK.BL.DomainModel
 {
     public class Tariff 
     {

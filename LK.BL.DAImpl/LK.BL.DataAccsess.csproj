@@ -7,8 +7,8 @@
     <ProjectGuid>{77B89D29-EF63-48E1-8F20-37393CF75115}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LK.BL.DAImpl</RootNamespace>
-    <AssemblyName>LK.BL.DAImpl</AssemblyName>
+    <RootNamespace>LK.BL.DataAccsess</RootNamespace>
+    <AssemblyName>LK.BL.DataAccsess</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

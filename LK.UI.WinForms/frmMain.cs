@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LK.BL.Model.DomainModel;
+using LK.BL.DomainModel;
 using LK.BL.DomainModel.Controller;
 
 namespace LK.UI.WinForms

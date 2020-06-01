@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F2F0FD6A-3BBB-460F-B5E6-5537FED41817}</ProjectGuid>
+    <ProjectGuid>{615C5B2D-D11F-463A-B022-11B4285838F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LK.BL.BusinessService</RootNamespace>
-    <AssemblyName>LK.BL.BusinessService</AssemblyName>
+    <RootNamespace>LK.BL.DataAccsess</RootNamespace>
+    <AssemblyName>LK.BL.DataAccsess</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,21 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=5.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.5.2.0\lib\net461\Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,23 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessServiceImpl.cs" />
+    <Compile Include="DataAccsessImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LK.BL.BusinessService.Interface\LK.BL.BusinessService.Interface.csproj">
-      <Project>{e1eef6d6-f56b-40b7-a3de-48844f1d33ac}</Project>
-      <Name>LK.BL.BusinessService.Interface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LK.BL.DataAccsess\LK.BL.DataAccsess.csproj">
-      <Project>{615c5b2d-d11f-463a-b022-11b4285838f0}</Project>
-      <Name>LK.BL.DataAccsess</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LK_BL_DomainModel\LK.BL.DomainModel.csproj">
-      <Project>{B9FDA844-405D-47F5-98B0-6ECBF281A206}</Project>
+      <Project>{b9fda844-405d-47f5-98b0-6ecbf281a206}</Project>
       <Name>LK.BL.DomainModel</Name>
     </ProjectReference>
   </ItemGroup>
