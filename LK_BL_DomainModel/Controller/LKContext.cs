@@ -10,7 +10,7 @@ namespace LK.BL.DomainModel.Controller
 {
     public class LKContext : DbContext
     {
-        public LKContext() : base("DBConnect") { }
+        public LKContext() : base("DBConnect") { } 
 
         public DbSet<Abonent> Activities { get; set; }
         public DbSet<AbonentTraffic> AbonentTraffics { get; set; }
