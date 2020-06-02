@@ -63,6 +63,7 @@
             // 
             this.txbId.Location = new System.Drawing.Point(143, 39);
             this.txbId.Name = "txbId";
+            this.txbId.ReadOnly = true;
             this.txbId.Size = new System.Drawing.Size(197, 20);
             this.txbId.TabIndex = 57;
             // 
@@ -92,6 +93,7 @@
             this.btnAdd.TabIndex = 54;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // txbBandwidth
             // 

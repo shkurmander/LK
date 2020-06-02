@@ -10,9 +10,9 @@ namespace LK.BL.DomainModel
 
         public string Login { get; set; }
         public string Password { get; set; }
-        public int Number { get; set; }        
+        public long Number { get; set; }        
         public ICollection<Abonent> Abonent { get; set; }
-        public ICollection<Tariff> Tarrif { get; set; }
+        public ICollection<Tariff> Tariff { get; set; }
 
     }
 }

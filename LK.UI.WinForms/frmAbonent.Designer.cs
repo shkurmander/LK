@@ -1,4 +1,6 @@
-﻿namespace LK.UI.WinForms
+﻿using System;
+
+namespace LK.UI.WinForms
 {
     partial class frmAbonent
     {
@@ -40,7 +42,6 @@
             this.txbLastName = new System.Windows.Forms.TextBox();
             this.txbFirstName = new System.Windows.Forms.TextBox();
             this.txbPatronimyc = new System.Windows.Forms.TextBox();
-            this.txbBirthDate = new System.Windows.Forms.TextBox();
             this.txbPassport = new System.Windows.Forms.TextBox();
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.txbPhone = new System.Windows.Forms.TextBox();
@@ -52,6 +53,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cbxAccount = new System.Windows.Forms.ComboBox();
             this.btnAddAccount = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -165,13 +167,6 @@
             this.txbPatronimyc.Size = new System.Drawing.Size(197, 20);
             this.txbPatronimyc.TabIndex = 11;
             // 
-            // txbBirthDate
-            // 
-            this.txbBirthDate.Location = new System.Drawing.Point(187, 225);
-            this.txbBirthDate.Name = "txbBirthDate";
-            this.txbBirthDate.Size = new System.Drawing.Size(171, 20);
-            this.txbBirthDate.TabIndex = 12;
-            // 
             // txbPassport
             // 
             this.txbPassport.Location = new System.Drawing.Point(510, 40);
@@ -208,6 +203,7 @@
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnEdit
             // 
@@ -226,11 +222,13 @@
             this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "Выход";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // txbId
             // 
             this.txbId.Location = new System.Drawing.Point(161, 46);
             this.txbId.Name = "txbId";
+            this.txbId.ReadOnly = true;
             this.txbId.Size = new System.Drawing.Size(197, 20);
             this.txbId.TabIndex = 20;
             // 
@@ -263,11 +261,20 @@
             this.btnAddAccount.Text = "+";
             this.btnAddAccount.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(203, 225);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(155, 20);
+            this.dateTimePicker1.TabIndex = 24;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
+            // 
             // frmAbonent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 371);
+            this.ClientSize = new System.Drawing.Size(780, 391);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnAddAccount);
             this.Controls.Add(this.cbxAccount);
             this.Controls.Add(this.label10);
@@ -279,7 +286,6 @@
             this.Controls.Add(this.txbPhone);
             this.Controls.Add(this.txbAddress);
             this.Controls.Add(this.txbPassport);
-            this.Controls.Add(this.txbBirthDate);
             this.Controls.Add(this.txbPatronimyc);
             this.Controls.Add(this.txbFirstName);
             this.Controls.Add(this.txbLastName);
@@ -294,10 +300,13 @@
             this.Controls.Add(this.label1);
             this.Name = "frmAbonent";
             this.Text = "Данные абонента";
+            this.Load += new System.EventHandler(this.FrmAbonent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+       
 
         #endregion
 
@@ -313,7 +322,6 @@
         private System.Windows.Forms.TextBox txbLastName;
         private System.Windows.Forms.TextBox txbFirstName;
         private System.Windows.Forms.TextBox txbPatronimyc;
-        private System.Windows.Forms.TextBox txbBirthDate;
         private System.Windows.Forms.TextBox txbPassport;
         private System.Windows.Forms.TextBox txbAddress;
         private System.Windows.Forms.TextBox txbPhone;
@@ -325,5 +333,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbxAccount;
         private System.Windows.Forms.Button btnAddAccount;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

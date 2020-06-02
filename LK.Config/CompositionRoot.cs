@@ -20,9 +20,12 @@ namespace LK.Config
             var builder = new ContainerBuilder();
            
             builder.RegisterType<BusinessServiceImpl>().As<IBusinessService>();
-            builder.RegisterType<DataAccsess>().As<IDataAccsess>();
-
-
+            builder.RegisterType<DataAccsessImpl>().As<IDataAccsess>();
+            /*builder.RegisterType<Abonent>().As<Abonent>();
+            builder.RegisterType<Account>();
+            builder.RegisterType<Tariff>();
+            builder.RegisterType<TrafficType>();
+            */
             var container = builder.Build();
             root = container.Resolve<IBusinessService>();
         }

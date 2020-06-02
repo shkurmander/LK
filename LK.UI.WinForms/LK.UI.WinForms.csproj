@@ -145,6 +145,10 @@
       <Project>{2d468617-e38d-458b-b732-e9f9abb58838}</Project>
       <Name>LK.Config</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LK_BL_DomainModel\LK.BL.DomainModel.csproj">
+      <Project>{B9FDA844-405D-47F5-98B0-6ECBF281A206}</Project>
+      <Name>LK.BL.DomainModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

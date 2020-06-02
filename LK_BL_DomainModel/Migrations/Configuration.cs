@@ -5,7 +5,7 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<LK.BL.DomainModel.Controller.LKContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<LK.BL.DomainModel.LKContext>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@
             ContextKey = "LK.BL.DomainModel.Controller.LKContext";
         }
 
-        protected override void Seed(LK.BL.DomainModel.Controller.LKContext context)
+        protected override void Seed(LK.BL.DomainModel.LKContext context)
         {
             //  This method will be called after migrating to the latest version.
 

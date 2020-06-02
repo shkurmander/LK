@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LK.BL.DomainModel.Controller
+namespace LK.BL.DomainModel
 {
     public class LKContext : DbContext
     {
         public LKContext() : base("DBConnect") { } 
 
-        public DbSet<Abonent> Activities { get; set; }
+        public DbSet<Abonent> Abonent { get; set; }
         public DbSet<AbonentTraffic> AbonentTraffics { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Tariff> Tariffs { get; set; }

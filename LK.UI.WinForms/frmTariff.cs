@@ -16,5 +16,10 @@ namespace LK.UI.WinForms
         {
             InitializeComponent();
         }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

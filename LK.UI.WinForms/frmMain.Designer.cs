@@ -28,39 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.базаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.абонентыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.аккаунтыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.тарифыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.трафикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // menuStrip1
             // 
-            this.button1.Location = new System.Drawing.Point(301, 169);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 86);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.базаToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // label1
+            // базаToolStripMenuItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(354, 320);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.базаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.абонентыToolStripMenuItem,
+            this.аккаунтыToolStripMenuItem,
+            this.тарифыToolStripMenuItem,
+            this.трафикToolStripMenuItem});
+            this.базаToolStripMenuItem.Name = "базаToolStripMenuItem";
+            this.базаToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.базаToolStripMenuItem.Text = "База";
+            // 
+            // абонентыToolStripMenuItem
+            // 
+            this.абонентыToolStripMenuItem.Name = "абонентыToolStripMenuItem";
+            this.абонентыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.абонентыToolStripMenuItem.Text = "Абоненты";
+            this.абонентыToolStripMenuItem.Click += new System.EventHandler(this.АбонентыToolStripMenuItem_Click);
+            // 
+            // аккаунтыToolStripMenuItem
+            // 
+            this.аккаунтыToolStripMenuItem.Name = "аккаунтыToolStripMenuItem";
+            this.аккаунтыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.аккаунтыToolStripMenuItem.Text = "Аккаунты";
+            this.аккаунтыToolStripMenuItem.Click += new System.EventHandler(this.АккаунтыToolStripMenuItem_Click);
+            // 
+            // тарифыToolStripMenuItem
+            // 
+            this.тарифыToolStripMenuItem.Name = "тарифыToolStripMenuItem";
+            this.тарифыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.тарифыToolStripMenuItem.Text = "Тарифы";
+            this.тарифыToolStripMenuItem.Click += new System.EventHandler(this.ТарифыToolStripMenuItem_Click);
+            // 
+            // трафикToolStripMenuItem
+            // 
+            this.трафикToolStripMenuItem.Name = "трафикToolStripMenuItem";
+            this.трафикToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.трафикToolStripMenuItem.Text = "Трафик";
+            this.трафикToolStripMenuItem.Click += new System.EventHandler(this.ТрафикToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,7 +105,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem базаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem абонентыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem аккаунтыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem тарифыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem трафикToolStripMenuItem;
     }
 }

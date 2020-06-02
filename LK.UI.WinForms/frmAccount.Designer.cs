@@ -65,6 +65,7 @@
             // 
             this.txbId.Location = new System.Drawing.Point(141, 35);
             this.txbId.Name = "txbId";
+            this.txbId.ReadOnly = true;
             this.txbId.Size = new System.Drawing.Size(197, 20);
             this.txbId.TabIndex = 44;
             // 

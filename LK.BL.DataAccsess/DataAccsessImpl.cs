@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace LK.BL.DataAccsess
 {
-    public class DataAccsess : IDataAccsess
+    public class DataAccsessImpl : IDataAccsess
     {
+        LKContext db = new LKContext();
+
         public void AddAbonent()
         {
             /*Abonent abon = new Abonent
@@ -18,6 +20,13 @@ namespace LK.BL.DataAccsess
                 Patronimyc = patron
 
             };*/
+
+        }
+
+        public void AddAbonent(Abonent abonent)
+        {
+            db.Abonent.Add(abonent);
+            db.SaveChanges();
         }
 
         public void AddAccount()

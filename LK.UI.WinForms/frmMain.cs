@@ -40,5 +40,29 @@ namespace LK.UI.WinForms
             cntr = new CompositionRoot();
             cntr.BuildApplication();
         }
+
+        private void АбонентыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAbonent abonentForm = new frmAbonent();
+            abonentForm.ShowDialog();
+        }
+
+        private void АккаунтыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAccount accountForm = new frmAccount();
+            accountForm.ShowDialog();
+        }
+
+        private void ТарифыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTariff tariffForm = new frmTariff();
+            tariffForm.ShowDialog();
+        }
+
+        private void ТрафикToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTrafficType trafficForm = new frmTrafficType();
+            trafficForm.ShowDialog();
+        }
     }
 }
