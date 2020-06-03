@@ -10,7 +10,7 @@ namespace LK.BL.DataAccsess
 {
     public class DataAccsessImpl : IDataAccsess
     {
-        LKContext db = new LKContext();
+        
 
         public void AddAbonent()
         {
@@ -25,6 +25,7 @@ namespace LK.BL.DataAccsess
 
         public void AddAbonent(Abonent abonent)
         {
+            LKContext db = new LKContext();
             db.Abonent.Add(abonent);
             db.SaveChanges();
         }
@@ -64,9 +65,10 @@ namespace LK.BL.DataAccsess
             throw new NotImplementedException();
         }
 
-        public T GetData<T>() where T : class
+        public LKContext GetData() 
         {
-            throw new NotImplementedException();
+            LKContext db = new LKContext();
+            return db;
         }
     }
 }

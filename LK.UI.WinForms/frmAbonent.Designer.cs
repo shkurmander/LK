@@ -54,6 +54,8 @@ namespace LK.UI.WinForms
             this.cbxAccount = new System.Windows.Forms.ComboBox();
             this.btnAddAccount = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -269,11 +271,20 @@ namespace LK.UI.WinForms
             this.dateTimePicker1.TabIndex = 24;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(64, 361);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(648, 215);
+            this.dataGridView.TabIndex = 25;
+            // 
             // frmAbonent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 391);
+            this.ClientSize = new System.Drawing.Size(780, 588);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnAddAccount);
             this.Controls.Add(this.cbxAccount);
@@ -301,6 +312,7 @@ namespace LK.UI.WinForms
             this.Name = "frmAbonent";
             this.Text = "Данные абонента";
             this.Load += new System.EventHandler(this.FrmAbonent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,5 +346,6 @@ namespace LK.UI.WinForms
         private System.Windows.Forms.ComboBox cbxAccount;
         private System.Windows.Forms.Button btnAddAccount;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

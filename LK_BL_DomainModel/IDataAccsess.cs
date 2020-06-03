@@ -16,7 +16,9 @@ namespace LK.BL.DomainModel
         void EditAbonent();
         void EditTariff();
         void EditTrafficType();
-        T GetData<T>() where T : class;
+        //T GetData<T>() where T : class;
+        LKContext GetData();
+
 
 
     }

@@ -21,6 +21,7 @@ namespace LK.BL.BusinessService
         void ViewAddAbonent();
         void ViewAddTariff();
         void ViewAddTrafficType();
+        LKContext GetData();
 
     }
 }

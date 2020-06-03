@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,10 +32,16 @@ namespace LK.UI.WinForms
         {
             container = new CompositionRoot();
             container.BuildApplication();
+            GetAbonetsData();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            if (DateTime.Now.Year - dateTimePicker1.Value.Year < 18)
+            {
+                MessageBox.Show("Неокрректная дата рождения, либо гражданин еще не достиг правового возраста");
+                return;
+            }
             var tarr = new Tariff
             {
                 Name = "Tariff #1",
@@ -67,7 +74,8 @@ namespace LK.UI.WinForms
                 Accounts = accLst 
             };
             container.root.AddAbonent(abon);
-            ClearForm();            
+            ClearForm();
+            GetAbonetsData();
     }
 
 
@@ -90,6 +98,13 @@ namespace LK.UI.WinForms
             txbEmail.Text = "";
             txbPassport.Text = "";
             txbPhone.Text = "";
+        }
+        private void GetAbonetsData()
+        {
+            var abon = container.root.GetData().Abonent;
+            //abonSet.Set<Abonent>().Load();
+            abon.Load();
+            this.dataGridView.DataSource = abon.Local.ToBindingList();
         }
     }
 }

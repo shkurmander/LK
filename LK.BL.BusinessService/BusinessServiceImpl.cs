@@ -12,7 +12,7 @@ namespace LK.BL.BusinessService
 {
     public class BusinessServiceImpl : IBusinessService
     {
-        IDataAccsess da;       
+        IDataAccsess da;
         public void AddAbonent()
         {
             throw new NotImplementedException();
@@ -34,7 +34,7 @@ namespace LK.BL.BusinessService
             throw new NotImplementedException();
         }
 
-     
+
         public void AddTrafficType(TrafficType trType)
         {
             throw new NotImplementedException();
@@ -78,6 +78,12 @@ namespace LK.BL.BusinessService
         public void ViewAddTrafficType()
         {
             throw new NotImplementedException();
+        }
+        public LKContext GetData()
+        {
+            da = new DataAccsessImpl();
+            return da.GetData();
+
         }
     }
 }
