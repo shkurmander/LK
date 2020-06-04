@@ -20,7 +20,7 @@ namespace LK.UI.WinForms
         public frmAbonent()
         {
             InitializeComponent();
-            
+
         }
 
         private void CbxAccount_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,9 +57,9 @@ namespace LK.UI.WinForms
                 Password = "dummypass",
                 Tariff = tariffLst
             };
-            var accLst =  new List<Account>();
+            var accLst = new List<Account>();
             accLst.Add(acc);
-            
+
 
             Abonent abon = new Abonent
             {
@@ -71,12 +71,12 @@ namespace LK.UI.WinForms
                 EMail = txbEmail.Text,
                 Passport = txbPassport.Text,
                 Phone = txbPhone.Text,
-                Accounts = accLst 
+                Accounts = accLst
             };
             container.root.AddAbonent(abon);
             ClearForm();
             GetAbonetsData();
-    }
+        }
 
 
         private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -105,6 +105,31 @@ namespace LK.UI.WinForms
             //abonSet.Set<Abonent>().Load();
             abon.Load();
             this.dataGridView.DataSource = abon.Local.ToBindingList();
+        }
+
+        private void DataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView.CurrentCell.RowIndex < dataGridView.RowCount - 1)
+            {
+                var selRowNum = dataGridView.CurrentCell.RowIndex;
+                txbId.Text = dataGridView[0, selRowNum].Value.ToString();
+                txbFirstName.Text = dataGridView[1, selRowNum].Value.ToString(); ;
+                txbPatronimyc.Text = dataGridView[2, selRowNum].Value.ToString(); ;
+                txbLastName.Text = dataGridView[3, selRowNum].Value.ToString(); ;
+                //dateTimePicker1.Value = Convert.ToDateTime(dataGridView[5, selRowNum].Value.ToString());
+                txbAddress.Text = dataGridView[5, selRowNum].Value.ToString(); ;
+                txbEmail.Text = dataGridView[6, selRowNum].Value.ToString(); ;
+                txbPassport.Text = dataGridView[7, selRowNum].Value.ToString(); ;
+                txbPhone.Text = dataGridView[8, selRowNum].Value.ToString(); ;
+            }
+
+            /*string s = "";
+            for (int i = 0; i < dataGridView.Columns.Count-1; i++)
+            {
+                s += dataGridView[i, selRowNum].Value.ToString() + "\n";
+            }
+            MessageBox.Show(s);
+            */
         }
     }
 }
