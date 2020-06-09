@@ -74,7 +74,7 @@ namespace LK.UI.WinForms
             cbxMeasure.Text = "";            
         }
 
-        private void DataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        /*private void DataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ClearForm();
             dataGridView.ClearSelection();
@@ -85,6 +85,6 @@ namespace LK.UI.WinForms
         private void DataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             return;
-        }
+        }*/
     }
 }

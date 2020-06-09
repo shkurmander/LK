@@ -123,13 +123,7 @@ namespace LK.UI.WinForms
                 txbPhone.Text = dataGridView[8, selRowNum].Value.ToString(); ;
             }
 
-            /*string s = "";
-            for (int i = 0; i < dataGridView.Columns.Count-1; i++)
-            {
-                s += dataGridView[i, selRowNum].Value.ToString() + "\n";
-            }
-            MessageBox.Show(s);
-            */
+            
         }
     }
 }
