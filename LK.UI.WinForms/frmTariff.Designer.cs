@@ -39,11 +39,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxMeasure
             // 
+            this.cbxMeasure.AutoCompleteCustomSource.AddRange(new string[] {
+            "Mbit/s",
+            "Kbit/s",
+            "Gbit/s"});
             this.cbxMeasure.FormattingEnabled = true;
+            this.cbxMeasure.Items.AddRange(new object[] {
+            "Mbit",
+            "Kbit",
+            "Gbit"});
             this.cbxMeasure.Location = new System.Drawing.Point(466, 85);
             this.cbxMeasure.Name = "cbxMeasure";
             this.cbxMeasure.Size = new System.Drawing.Size(205, 21);
@@ -75,6 +85,7 @@
             this.btnCancel.TabIndex = 56;
             this.btnCancel.Text = "Выход";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnEdit
             // 
@@ -140,11 +151,24 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "ID";
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(46, 219);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView.Size = new System.Drawing.Size(625, 163);
+            this.dataGridView.TabIndex = 60;
+            this.dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_ColumnHeaderMouseClick);
+            this.dataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView_RowHeaderMouseClick);
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.DataGridView_SelectionChanged);
+            // 
             // frmTariff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 211);
+            this.ClientSize = new System.Drawing.Size(716, 394);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.cbxMeasure);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txbId);
@@ -158,6 +182,8 @@
             this.Controls.Add(this.label1);
             this.Name = "frmTariff";
             this.Text = "frmTariff";
+            this.Load += new System.EventHandler(this.FrmTariff_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +202,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

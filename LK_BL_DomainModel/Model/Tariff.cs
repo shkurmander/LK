@@ -7,7 +7,6 @@ namespace LK.BL.DomainModel
         public int id { get; set; }
         public string Name { get; set; }
         public int Bandwidth { get; set; }
-
         public string Measure { get; set; }
     }
 }

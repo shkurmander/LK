@@ -35,9 +35,11 @@ namespace LK.BL.DataAccsess
             throw new NotImplementedException();
         }
 
-        public void AddTariff()
+        public void AddTariff(Tariff tarrif)
         {
-            throw new NotImplementedException();
+            LKContext db = new LKContext();
+            db.Tariffs.Add(tarrif);
+            db.SaveChanges();
         }
 
         public void AddTrafficType()

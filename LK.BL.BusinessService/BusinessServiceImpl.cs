@@ -29,9 +29,10 @@ namespace LK.BL.BusinessService
             throw new NotImplementedException();
         }
 
-        public void AddTariff()
+        public void AddTariff(Tariff tariff)
         {
-            throw new NotImplementedException();
+            da = new DataAccsessImpl();
+            da.AddTariff(tariff);
         }
 
 

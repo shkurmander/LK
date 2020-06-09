@@ -10,7 +10,7 @@ namespace LK.BL.DomainModel
     {
         void AddAccount();
         void AddAbonent(Abonent abonent);
-        void AddTariff();
+        void AddTariff(Tariff tariff);
         void AddTrafficType();
         void EditAccount();
         void EditAbonent();

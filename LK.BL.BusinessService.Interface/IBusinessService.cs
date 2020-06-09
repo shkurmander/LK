@@ -11,7 +11,7 @@ namespace LK.BL.BusinessService
     {
         void AddAccount();
         void AddAbonent(Abonent abonent);
-        void AddTariff();
+        void AddTariff(Tariff tariff);
         void AddTrafficType(TrafficType trType);
         void EditAccount();
         void EditAbonent();

@@ -109,7 +109,7 @@ namespace LK.UI.WinForms
 
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView.CurrentCell.RowIndex < dataGridView.RowCount - 1)
+            if (dataGridView.CurrentCell != null && dataGridView.CurrentCell.RowIndex < dataGridView.RowCount - 1) //Кидает исключение на щелчок по шапке
             {
                 var selRowNum = dataGridView.CurrentCell.RowIndex;
                 txbId.Text = dataGridView[0, selRowNum].Value.ToString();
