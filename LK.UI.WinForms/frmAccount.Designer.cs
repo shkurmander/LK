@@ -41,6 +41,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxTariff
@@ -77,6 +79,7 @@
             this.btnCancel.TabIndex = 43;
             this.btnCancel.Text = "Выход";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnEdit
             // 
@@ -95,6 +98,7 @@
             this.btnAdd.TabIndex = 41;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // txbPassword
             // 
@@ -158,11 +162,22 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "ID";
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(44, 242);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView.Size = new System.Drawing.Size(614, 190);
+            this.dataGridView.TabIndex = 47;
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.DataGridView_SelectionChanged);
+            // 
             // frmAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 235);
+            this.ClientSize = new System.Drawing.Size(701, 464);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.cbxTariff);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txbId);
@@ -178,6 +193,8 @@
             this.Controls.Add(this.label1);
             this.Name = "frmAccount";
             this.Text = "Account";
+            this.Load += new System.EventHandler(this.FrmAccount_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +214,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

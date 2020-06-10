@@ -24,9 +24,10 @@ namespace LK.BL.BusinessService
             da.AddAbonent(abonent);
         }
 
-        public void AddAccount()
+        public void AddAccount(Account account)
         {
-            throw new NotImplementedException();
+            da = new DataAccsessImpl();
+            da.AddAccount(account);
         }
 
         public void AddTariff(Tariff tariff)
@@ -38,7 +39,8 @@ namespace LK.BL.BusinessService
 
         public void AddTrafficType(TrafficType trType)
         {
-            throw new NotImplementedException();
+            da = new DataAccsessImpl();
+            da.AddTrafficType(trType);
         }
 
         public void EditAbonent()

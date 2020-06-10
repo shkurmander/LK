@@ -30,9 +30,11 @@ namespace LK.BL.DataAccsess
             db.SaveChanges();
         }
 
-        public void AddAccount()
+        public void AddAccount(Account account)
         {
-            throw new NotImplementedException();
+            LKContext db = new LKContext();
+            db.Accounts.Add(account);
+            db.SaveChanges();
         }
 
         public void AddTariff(Tariff tarrif)
@@ -42,9 +44,11 @@ namespace LK.BL.DataAccsess
             db.SaveChanges();
         }
 
-        public void AddTrafficType()
+        public void AddTrafficType(TrafficType trType)
         {
-            throw new NotImplementedException();
+            LKContext db = new LKContext();
+            db.TrafficTypes.Add(trType);
+            db.SaveChanges();
         }
 
         public void EditAbonent()

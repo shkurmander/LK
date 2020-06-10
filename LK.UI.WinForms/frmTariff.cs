@@ -21,6 +21,7 @@ namespace LK.UI.WinForms
             InitializeComponent();
         }
 
+        //Кнопка Добавить
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             Tariff tarrifInst = new Tariff
@@ -34,17 +35,21 @@ namespace LK.UI.WinForms
             GetTariffData();
         }
 
+        //Кнопка Отмена
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //Загрузка формы
         private void FrmTariff_Load(object sender, EventArgs e)
         {
             container = new CompositionRoot();
             container.BuildApplication();
             GetTariffData();
         }
+
+        //Подгрузка тарифов из базы
         private void GetTariffData()
         {
             var tariff = container.root.GetData().Tariffs;           
@@ -53,7 +58,7 @@ namespace LK.UI.WinForms
         }
 
 
-
+        //Выбор строки в таблице
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView.CurrentCell!=null && dataGridView.CurrentCell.RowIndex < dataGridView.RowCount - 1) //Кидает исключение на щелчок по шапке
@@ -67,8 +72,10 @@ namespace LK.UI.WinForms
             }
             
         }
+        //Очистка формы
         private void ClearForm()
         {
+            txbId.Text = "";
             txbName.Text = "";
             txbBandwidth.Text = "";
             cbxMeasure.Text = "";            

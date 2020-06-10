@@ -27,14 +27,14 @@ namespace LK.UI.WinForms
         {
 
         }
-
+        //Загрузка формы
         private void FrmAbonent_Load(object sender, EventArgs e)
         {
             container = new CompositionRoot();
             container.BuildApplication();
             GetAbonetsData();
         }
-
+        //Кнопка добавить
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (DateTime.Now.Year - dateTimePicker1.Value.Year < 18)
@@ -83,7 +83,7 @@ namespace LK.UI.WinForms
         {
             abonentBirth = dateTimePicker1.Value;
         }
-
+        //Кнопка Отмена
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -99,6 +99,7 @@ namespace LK.UI.WinForms
             txbPassport.Text = "";
             txbPhone.Text = "";
         }
+        //Подгрузка данных абонентов из базы
         private void GetAbonetsData()
         {
             var abon = container.root.GetData().Abonent;
@@ -106,7 +107,7 @@ namespace LK.UI.WinForms
             abon.Load();
             this.dataGridView.DataSource = abon.Local.ToBindingList();
         }
-
+        //Выбор строки в DataGridView
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView.CurrentCell != null && dataGridView.CurrentCell.RowIndex < dataGridView.RowCount - 1) //Кидает исключение на щелчок по шапке

@@ -8,10 +8,10 @@ namespace LK.BL.DomainModel
 {
     public interface IDataAccsess
     {
-        void AddAccount();
+        void AddAccount(Account account);
         void AddAbonent(Abonent abonent);
         void AddTariff(Tariff tariff);
-        void AddTrafficType();
+        void AddTrafficType(TrafficType trType);
         void EditAccount();
         void EditAbonent();
         void EditTariff();

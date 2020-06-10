@@ -30,11 +30,13 @@
         {
             this.txbId = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txbType = new System.Windows.Forms.TextBox();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // txbId
@@ -53,15 +55,16 @@
             this.btnCancel.TabIndex = 67;
             this.btnCancel.Text = "Выход";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // btnEdit
+            // btnDelete
             // 
-            this.btnEdit.Location = new System.Drawing.Point(161, 181);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 66;
-            this.btnEdit.Text = "Изменить";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(161, 181);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 66;
+            this.btnDelete.Text = "Удалить";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
@@ -71,6 +74,7 @@
             this.btnAdd.TabIndex = 65;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // label5
             // 
@@ -93,32 +97,39 @@
             this.label1.TabIndex = 60;
             this.label1.Text = "ID";
             // 
-            // comboBox1
+            // txbType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Входящий",
-            "Исходящий"});
-            this.comboBox1.Location = new System.Drawing.Point(148, 95);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(197, 21);
-            this.comboBox1.TabIndex = 69;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            this.txbType.Location = new System.Drawing.Point(149, 95);
+            this.txbType.Name = "txbType";
+            this.txbType.Size = new System.Drawing.Size(196, 20);
+            this.txbType.TabIndex = 69;
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(54, 231);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(291, 150);
+            this.dataGridView.TabIndex = 70;
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.DataGridView_SelectionChanged);
             // 
             // frmTrafficType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 262);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(406, 404);
+            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.txbType);
             this.Controls.Add(this.txbId);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Name = "frmTrafficType";
             this.Text = "frmTrafficType";
+            this.Load += new System.EventHandler(this.FrmTrafficType_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,10 +138,11 @@
         #endregion
         private System.Windows.Forms.TextBox txbId;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txbType;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

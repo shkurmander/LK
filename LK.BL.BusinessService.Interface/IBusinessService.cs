@@ -9,7 +9,7 @@ namespace LK.BL.BusinessService
 {
     public interface IBusinessService
     {
-        void AddAccount();
+        void AddAccount(Account account);
         void AddAbonent(Abonent abonent);
         void AddTariff(Tariff tariff);
         void AddTrafficType(TrafficType trType);
