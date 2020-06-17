@@ -78,6 +78,10 @@
     <Compile Include="Migrations\202006021804143_v2.designer.cs">
       <DependentUpon>202006021804143_v2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006171129411_Relationships_change_1.cs" />
+    <Compile Include="Migrations\202006171129411_Relationships_change_1.designer.cs">
+      <DependentUpon>202006171129411_Relationships_change_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Abonent.cs" />
     <Compile Include="Model\AbonentTraffic.cs" />
@@ -99,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006021804143_v2.resx">
       <DependentUpon>202006021804143_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006171129411_Relationships_change_1.resx">
+      <DependentUpon>202006171129411_Relationships_change_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

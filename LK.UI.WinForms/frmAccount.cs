@@ -15,15 +15,16 @@ namespace LK.UI.WinForms
 {
     public partial class frmAccount : Form
     {
-        CompositionRoot container;
-        List<Tariff> tarrList;
+        CompositionRoot container; //контейнер DI
+        List<Tariff> tarrList; // Список тарифов
+        DbSet<Account> data;   // Набор аккаунтов
         public frmAccount()
         {
             InitializeComponent();
 
-            cbxTariff.DataSource = container.root.GetData().Tariffs;
-            cbxTariff.DisplayMember = "Name";
-            cbxTariff.DisplayMember = "Id";
+            //cbxTariff.DataSource = container.root.GetData().Tariffs;
+            //cbxTariff.DisplayMember = "Name";
+            //cbxTariff.DisplayMember = "Id";
         }
 
         //Кнопка Отмена
@@ -35,11 +36,12 @@ namespace LK.UI.WinForms
         //Кнопка Добавить
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            Tariff tarr = (Tariff)cbxTariff.SelectedItem;
+            
             var acc = new Account
             {
                 Number = Convert.ToInt64(txbNumber.Text),
-                //ariff = 
-                //Tariff = cbxTariff.SelectedItem.ToString(), // Надо сделать подгрузку и выбор
+                AccTariff = tarr,                
                 Login = txbLogin.Text,
                 Password = txbPassword.Text
             };
@@ -55,18 +57,18 @@ namespace LK.UI.WinForms
                 var selRowNum = dataGridView.CurrentCell.RowIndex;
                 txbId.Text = dataGridView[0, selRowNum].Value.ToString();
                 txbNumber.Text = dataGridView[1, selRowNum].Value.ToString();
-                cbxTariff.Text = dataGridView[3, selRowNum].Value.ToString();
                 txbLogin.Text = dataGridView[2, selRowNum].Value.ToString();
-                txbPassword.Text = dataGridView[2, selRowNum].Value.ToString();
-            }      
+                txbPassword.Text = dataGridView[3, selRowNum].Value.ToString();
+            }
+            else ClearForm();
 
         }
         //Подгрузка аккаунтов из базы
         private void GetAccountData()
         {
-            var data = container.root.GetData().Accounts;
+            data = container.root.GetData().Accounts;
             data.Load();
-            this.dataGridView.DataSource = data.Local.ToBindingList();
+            this.dataGridView.DataSource = data.Local.ToBindingList();            
         }
 
         //Очистка формы
@@ -87,6 +89,18 @@ namespace LK.UI.WinForms
             container.BuildApplication();
             GetAccountData();
             tarrList = container.root.GetData().Tariffs.ToList();
+        }
+
+        private void CbxTariff_MouseClick(object sender, MouseEventArgs e)
+        {
+            cbxTariff.DataSource = tarrList;
+            cbxTariff.DisplayMember = "Name";
+            cbxTariff.ValueMember = "Id";
+        }
+
+        private void BtnInfo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(tarrList.ToString());
         }
     }
 }

@@ -18,7 +18,7 @@ namespace LK.BL.DomainModel
         public string EMail { get; set; }
         public string Passport { get; set; }
         public string Phone { get; set; }
-        public ICollection<Account> Accounts { get; set; }
+        public List<Account> Accounts { get; set; }
         
     }
 

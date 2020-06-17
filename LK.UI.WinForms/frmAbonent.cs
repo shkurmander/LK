@@ -48,14 +48,13 @@ namespace LK.UI.WinForms
                 Bandwidth = 100,
                 Measure = "Mbit"
             };
-            var tariffLst = new List<Tariff>();
-            tariffLst.Add(tarr);
+
             var acc = new Account
             {
                 Number = 622011020330,
                 Login = "fttx0403-155-000",
                 Password = "dummypass",
-                Tariff = tariffLst
+                AccTariff = tarr
             };
             var accLst = new List<Account>();
             accLst.Add(acc);

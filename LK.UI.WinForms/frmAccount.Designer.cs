@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.btnInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@
             this.cbxTariff.Name = "cbxTariff";
             this.cbxTariff.Size = new System.Drawing.Size(205, 21);
             this.cbxTariff.TabIndex = 46;
+            this.cbxTariff.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CbxTariff_MouseClick);
             // 
             // label10
             // 
@@ -172,11 +174,22 @@
             this.dataGridView.TabIndex = 47;
             this.dataGridView.SelectionChanged += new System.EventHandler(this.DataGridView_SelectionChanged);
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Location = new System.Drawing.Point(351, 183);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(75, 23);
+            this.btnInfo.TabIndex = 48;
+            this.btnInfo.Text = "Тест";
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.BtnInfo_Click);
+            // 
             // frmAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 464);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.cbxTariff);
             this.Controls.Add(this.label10);
@@ -215,5 +228,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button btnInfo;
     }
 }
